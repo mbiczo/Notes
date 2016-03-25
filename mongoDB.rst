@@ -1,73 +1,77 @@
-===================
-R&D NoSQL Databases
-===================
+MongoDB Quick Ref Guide
+=======================
 Purpose:
-  Research the benefit and differences between a NoSQL data model versus a traditional RDBMS.
+  Research the benefit and differences between a NoSQL data model such as MongoDB versus a traditional RDBMS.
 
-MongoDB
-=======
+Document DB
+===========
 MongoDB is an open-source, document database designed for ease of development and scaling.  
 A record in MongoDB is a document, which is a data structure composed of field and value pairs. 
-MongoDB documents are similar to JSON objects. The values of fields may include other documents, arrays, and arrays of documents.
+MongoDB documents are similar to ``JSON`` objects. The values of fields may include other documents, arrays, and arrays of documents.
 
-Working with Collections - JavaScript
--------------------------------------
-*Finding Items*
+Visit MongoDB `Reference Guide`_ for additional help
 
-  1. Find all items
-    db.<collection>.find() - returns all fields - same as SELECT *
-  2. Filter logic and columns - also works with nested arrays
-    db.<collection>.find({"name":"James", "age": 25}, {"name":true, "age":false})
-    db.<collection>.find({"balance" :{$gte: 0, $lte: 1000}})
-    
-    $type
-      Searches for certain data types based on BSON int mapping here.
-    $regex
-      Searches string values
-    $exists
-      Checks to see if item is present or not
-    $all : ["pretzels", "beer"]
-      Used to query multiple values - ALL MUST MATCH (and)
-    $in : ["Howard", "John"]
-      Used to query multiple values - ANY VALUES MUST MATCH (or)
-    $or
-      ex: 
-    $and
-      ex:
+.. _Reference Guide: https://docs.mongodb.org/manual/reference/
+
+PyMongo - Using Python 2.7
+--------------------------
+**Finding Items**
+
+Find one item using ``collection.find_one()`` and ``operators`` such as ``$lt`` and ``$gt``, or greater than.
+
+.. code:: python
+
+  def find_one():
+    query = {'field1':'value', 'field2': {'$gt': 50, '$lt':70}}  #greater than 50 and less than 70
+    try:
+      doc = collection.find_one(query)
+    except Exception as e:
+      print "Unexpected error", type(e), e
       
-  3. Cursors - manipulating server cursor on DB
-    cur = db.people.find(); null;
-    cur.hasNext()
-    cur.next()
-    cur.limit(5)
-    cur.sort( {name: -1} )
-    
-  4. Counting
-    count()
+    print doc
 
-*Updating Items
-  Performs a wholesale replacement - *BE CAREFUL DOING THIS
-  1. db.<collection>.update( {name : "Smith" }, { name : "Thompson" , salary : 50000 })
-  
-  Just update individual field
-  2. db.<collections>.update( {name : "Alice" }, { $set : {age : 30}})
 
-  3. $unset : { field: 1}
-    Note: the value is arbitrary and isnored 
+Visit Mongo's page on `Operators`_ for additional features
+
+.. _Operators: https://docs.mongodb.org/manual/reference/operator/
+
+
   
-  4. $upsert : true
-    updates record if exists, otherwise inserts
+Find all documents using ``collection.find()`` and a ``for`` loop only returning *projected* fields
+
+.. code:: python
+
+  def find():
+    query = {'field1':'value'}
     
-  5. Update multi items - may process some docs then others as they unlock
-    > must add: multi : true
+    # Shows field1, hides _id field (default = yes)
+    projection = {'field1: 1, '_id': 0}
     
-  6. Increment field
-    > $inc()
-    
-  7. Remove documents
-   > db.<collection>.remove( { } )
-    Will remove all docs
+    try:
+      cursor = collections.find(query, projection)  #add projection to find()
+    except Exception as e:
+      print "Unexpected error:", type(e), e
       
+    sanity = 0
+    for doc in cursor:
+      print doc
+      sanity += 1
+      if (sanity > 10):
+        break
+
+
+**Using regex**
+
+.. code:: python
+
+  query = {'title': {'$regex': 'apple|google', '$options': 'i'}}  #case [i]nsensitive
+
+Inserting, Updating & Deleting
+------------------------------
+
+
+      
+
 References
 ----------
 BSON reference: http://bsonspec.org/
