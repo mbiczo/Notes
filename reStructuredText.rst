@@ -38,11 +38,16 @@ row3      True     row3 True
 =======  =======  ===========
 
 
+.. code:: python
+
+  #create a code block of python
+  for i in range(10):
+    print(i)
+  
 
 Let's create a hyperlink and go to the `Hackerrank`_
 
 .. _Hackerrank: https://www.hackerrank.com/
-
 
 
 This scentance has a footnote - please refer to [GitHub]_ for more info
