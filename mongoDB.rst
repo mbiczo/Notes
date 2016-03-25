@@ -69,6 +69,48 @@ Find all documents using ``collection.find()`` and a ``for`` loop only returning
 Inserting, Updating & Deleting
 ------------------------------
 
+**Inserting**
+
+Insert one record at a time using ``insert_one()``
+
+.. code:: python
+
+  james = {'name': 'James Westfield', 'company': 'Waste Management',
+          'interests': ['eating', 'sleeping', 'more sleeping']}  #no _id provided
+  susan = {'_id': 42, 'name': 'Susan B', 'company': 'Google',
+          'interests': ['data science', 'statistics', 'eating']}  #_id provided
+          
+  try:
+    people.insert_one(james)
+    people.insert_one(susan)
+    
+  except Exception as e:
+    print "Unexpected error:", type(e), e
+          
+          
+**Note:** If a document **has** an ``_id``, Mongo will insert the doc without appending anything.  On the second insert, an exception will be thrown.
+
+**Note:** If a document **does not** have an ``_id``, Mongo will add one, then insert the doc.  On subsequent inserts, the doc **WILL** be inserted with a new ``_id`` as a new object.
+
+
+Insert multiple documents using ``insert_many()`` and a python ``list``
+
+.. code:: python
+
+  # Pass a list to be inserted
+  people_to_insert = [james, susan]
+  
+  try:
+    #script will insert until/when an error is encounted, then exception out
+    people.insert_many(people_to_insert, ordered=True)
+  
+
+
+**Updating**
+
+**Deleting**
+
+
 
       
 
