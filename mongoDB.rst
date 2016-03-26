@@ -15,7 +15,13 @@ Visit MongoDB `Reference Guide`_ for additional help
 
 PyMongo - Using Python 2.7
 --------------------------
-**Finding Items**
+
+PyMongo is a distribution containing tools for working with MongoDB and is recommended way to work with MongoDB from Python.  It must be imported to each Python script with ``import pymongo``
+
+Finding Items
+'''''''''''''
+
+**Find one item**
 
 Find one item using ``collection.find_one()`` and ``operators`` such as ``$lt`` and ``$gt``, or greater than.
 
@@ -36,7 +42,8 @@ Visit Mongo's page on `Operators`_ for additional features
 .. _Operators: https://docs.mongodb.org/manual/reference/operator/
 
 
-  
+**Find many itmes**
+
 Find all documents using ``collection.find()`` and a ``for`` loop only returning *projected* fields
 
 .. code:: python
@@ -66,10 +73,10 @@ Find all documents using ``collection.find()`` and a ``for`` loop only returning
 
   query = {'title': {'$regex': 'apple|google', '$options': 'i'}}  #case [i]nsensitive
 
-Inserting, Updating & Deleting
-------------------------------
+Inserting
+'''''''''
 
-**Inserting**
+**Insert one record**
 
 Insert one record at a time using ``insert_one()``
 
@@ -92,6 +99,7 @@ Insert one record at a time using ``insert_one()``
 
 **Note:** If a document **does not** have an ``_id``, Mongo will add one, then insert the doc.  On subsequent inserts, the doc **WILL** be inserted with a new ``_id`` as a new object.
 
+**Insert Many**
 
 Insert multiple documents using ``insert_many()`` and a python ``list``
 
@@ -103,16 +111,45 @@ Insert multiple documents using ``insert_many()`` and a python ``list``
   try:
     #script will insert until/when an error is encounted, then exception out
     people.insert_many(people_to_insert, ordered=True)
+
+Updating
+''''''''
+
+**Update One using** ``$set``
+
+.. code:: python
+
+  try:
+    #  Pass the pk in as the first arg to get one
+    result = scores.update_one({'_id': primary_key}, {'$set': {'review_date': datetime.datetime.utcnow()}})
+
+**Update Many using** ``$set``
+
+.. code:: python
+
+  try:
+    #  Pass an empty dict to select all
+    result = scores.update_many({}, {'$set': {'review_date': datetime.datetime.utcnow()}})
+    
+
+**Update One using** ``replace_one()``
+
+.. code:: python
+
+  # Get the doc you want to update
+  doc = collection.find_one(filter)
+  
+  # Modify doc as needed such as appending a new field
+  doc['new_field'] = 'something new'
+  
+  # Replace existing doc with modified doc
+  collection.replace_one({'_id': primary_key}, doc)
   
 
-
-**Updating**
-
-**Deleting**
+Deleting
+''''''''
 
 
-
-      
 
 References
 ----------
