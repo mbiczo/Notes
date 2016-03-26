@@ -1,0 +1,330 @@
+Basic Git process and reference guide
+**************************************
+last revised: 03/09/2016
+
+
+BASIC PROCESS
+
+Creating a Project from a local PC:
+
+	1: Establish the folder that will contain your project and respective files on the local machine
+	2: Tell Git to track the folder by calling git init
+
+		$ git init
+
+	3: After making desired changes in directory, tell git to add them to project staging area before committing
+
+		$ git add .
+			(the period calls all items in directory, you could also call individual files as well.)
+
+	4: Tell git to put changes into permanent memory by committing to repository and adding a message
+
+		$ git commit -m "add your message here."
+
+		$ git commit -am “add your message here.”
+			optionally adds your files to staging as well as commits them
+
+
+
+	7: See differences after changes in repository and working directory
+
+		$ git diff
+			(uses built-in Unix command to get ALL changes; can id a specific file as well)
+		
+		$ git diff --staged
+			(checks differences in staged only)
+
+		$ git diff <tree-ish_reference>..<tree-ish_reference>
+			git diff master..updated_branch
+			git diff SHA1..HEAD
+
+	8: Delete files from repository (or remove cached tracked files after ignoring)
+
+		$ git rm <file-to-delete>
+			(must rm/add to staging and also commit changes once deleted)
+
+		$ git rm —cached <file_to_ignore>
+			removes cached file being tracked after choosing to ignore in .gitignore
+
+	9: Renaming files in repository
+		
+		-If renaming through a GUI environment, and after renaming file:
+		
+		$ git add <renamed-file>
+		$ git rm <old-name-of-file>
+			(commit changes after)
+
+		
+		-Renaming (same as moving in Unix) through Git:
+		
+		$ git mv <file-to-rename/move> <new name/path of file>
+
+	10: Undo working directory changes (revert back to what the repository had)
+
+		-When NOT checking out a branch, and only talking about a file
+			(double dash refers to current directory/branch)
+
+		$ git checkout -- <filename>
+
+	11: Undo staging area changes:
+
+		$ git reset HEAD <filename>
+
+	*************************************
+	Changing, Updating, Deleting Commits
+	*************************************
+
+
+	Amend commit and/or message on last commit (where HEAD points to) after adding to stage:
+	
+		-To amend an older commit, create new commit
+
+		$ git commit --amend -m "message here"
+
+	Retrieving old versions:
+	
+		$ git checkout <first 10 of desired SHA> -- <filename>
+
+	Undo changes of commit (using revert - opens ‘vim’ text editor by default)
+
+		$ git revert <first 10 of desired SHA>
+
+			(opens vim; to save with no changes, press ‘esc’, then ‘:wq’ for write and quit)
+
+	Undo many changes/commits using ‘reset’ 
+
+		—-soft
+			does not change staging index or working directory
+		—-mixed (default - same as ‘$ git reset HEAD’)
+			changes staging index to match repository
+				does not change working directory
+		—-hard
+			changes staging index and working directory to match repository
+
+	
+
+	16: Find where the HEAD is currently pointed to
+
+		$ cat .git/HEAD
+			shows where the SHA is located
+			$ ref: refs/heads/master
+		$ cat .git/refs/heads/master
+			prints SHA
+			$ 5c86b4a98aa31cfe353df7612cbc6eac9
+	
+	
+		
+
+	17: Remove files using git ‘clear’
+	
+		research for further use
+
+	
+	18: Ignoring [new] files (creating a .gitignore file w/ nano)
+		(ideas to consider: packages and compressed files, compiled source code, logs and DBs, OS generated files, user-uploaded assets [images, pdfs, etc] check out gitignore repository on GitHub for more.)
+
+		$ nano .gitignore
+			
+			<file_name.txt>
+			*.php (all php files)
+			!.py (exclude/negate python files)
+
+		NOTE: setting .gitignore in a directory does not propagate to sub directories.
+
+		NOTE: to ignore files already committed to repository, see #8 above - removing/renaming files
+
+	
+	19: Referring to commits
+
+		-Full SHA, part SHA, HEAD pointer, tags (research)
+
+		
+		$ git ls-tree <tree-ish_object>
+
+		$ git ls-tree HEAD
+		$ git ls-tree master
+		$ git ls-tree <SHA-1>
+
+
+******************
+Logging Reference
+******************
+
+	See/search git log with changes and messages
+
+		$ git log -n <int>
+			(returns number of commits <spacebar> to pageDn)
+
+		$ git log —-oneline -n
+			(returns nice one-line format; -int for number of entries)
+
+		$ git log <file_name.txt>
+			returns all commits affecting that file (commands can be concatenated)
+		
+		$ git log -p <file_name.txt>
+			returns more detailed (patch log/diff) of what happened to specific file
+
+		$ git log —-stat
+		$ git log —- summary
+			can be used together/separate; returns various details on logs
+
+		$ git log --since=yyyy-mm-dd
+			(limits returns based on date you can also use 'until')
+		
+		$ git log --author="<authorname>"
+		
+		$ git log --grep = "<stringsearch>"
+			(performs global regular expression search in commit messages)
+
+		$ git log —-graph —-oneline —-decorate —-all
+			(nice compact layout to play with)
+
+		
+		
+*********
+Branches
+*********
+
+	Show current branch
+		$ git branch
+		$ git branch -r
+			(shows remote branches only)
+		$ git branch - a
+			(shows ‘all’ both remote and local branches)
+
+	Create new branch
+		$ git branch <new_branch_name>
+
+
+	Switch to branch
+		$ git checkout <desired_branch>
+
+	Create & Switch a new branch
+		$ git checkout -b <new_branch_name>
+			(signifies to checkout a ‘new branch’)
+
+	Rename a Branch
+		$ git branch -m <old_name> <new_name>
+
+	Delete a Branch
+		(cannot be on current branch)
+		$ git branch -d <branch_to_delete>
+
+	Configure cmd to show Branch
+
+
+********
+Merging
+********
+
+	Merge Branches (after changes accepted and ready to patch)
+
+	1. Checkout the branch that will be receiving the changes
+
+		$ git checkout <branch_name>
+
+	2. Merge or ‘Copy’ over changes
+
+		$ git merge <branch_with_update>
+
+	3. (Optional Maintenance) to see which branches can be deleted (read NOTE below)
+
+		$ git branch —-merged
+
+		NOTE: to keep things organized and non-redundant, after ‘cleaning’ the workspace - having no staged changes or changes otherwise - run $ git branch —-merged to view branches that can be possibly deleted.  Be sure to understand merging and the possibility of overlapping code.
+	
+	4. Dealing with CONFLICT merges
+
+		a. Abort changes altogether
+	
+			$ git merge —abort
+
+		b. Manually resolve
+
+			go into file and find designated 
+
+		c. Using merge tools (research)
+
+			$ git mergetools
+
+
+
+	5. Tips to reduce merge conflicts:
+
+		-keep lines short
+		-keep commits small and focused
+		-beware of stray edits to whitespace
+		-merge often
+		-track changes to master (research ‘tracking’ strategies)
+		
+
+*********
+Stashing
+*********
+
+	Research topic when needed or at another time
+
+		1. $ git stash save
+		2. $ git stash list
+		3. $ git stash drop <stash_item>
+
+
+
+**********
+Remotes
+**********
+
+	1. To see all remotes
+	
+		$ git remote
+		$ git remote -v
+			(v - more details (ex: url))
+
+	2. To add a remote <alias> <url>
+
+		$ git remote add <alias> <url>
+
+			(‘origin’ is typical for initial connection)
+
+	3. To remove a remote
+
+		$ git remote rm <alias/name_of_remote>
+
+
+	4. To push (upload) changes from local to remote
+
+		$ git push -u <name_of_remote> <name_of_branch>
+			(u - sets as default/tracking branch want to use this at first)
+		$ git push
+			(can be used after setting up tracking branch)
+
+	5. To fetch changes from remote repository
+
+		$ git fetch <name_of_remote>
+		
+		$ git merge
+
+		$ git pull
+
+			( == git fetch + git merge)
+
+	6. To clone (copy) a remote repository
+
+		$ git clone <url> <optional_name>
+
+			(by default, the name will be the root directory name on GitHub)
+			
+***************
+Ignoring Files
+***************
+
+	1. Create .gitignore file to ignore dirs/files/etc...
+	
+		$ touch .gitignore
+			creates file
+		$ vim .gitignore
+			edits contents go here for more info: https://git-scm.com/docs/gitignore
+		
+	2. To remove existing tracked files from cache (after adding .gitignore)
+	
+		$ git rm --cached <file>
