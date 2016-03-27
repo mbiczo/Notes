@@ -117,6 +117,8 @@ Updating
 
 **Update One using** ``$set``
 
+**VERIFY** Using ``$set`` only modifies *part* of the document in place rather than a wholesale replacement of the document such as using ``replace_one()``
+
 .. code:: python
 
   try:
@@ -132,7 +134,11 @@ Updating
     result = scores.update_many({}, {'$set': {'review_date': datetime.datetime.utcnow()}})
     
 
-**Update One using** ``replace_one()``
+**Update One using** ``replace_one(<doc_filter>, <update operation>)``
+
+This operation uses ``_update`` in that it performs a wholesale replacement of the document.  In other words, it will send the whole document back to the server to overwrite the *existing* or old document.  
+
+**CAUTION: This transaction is not atomic - and has a window of vurnerability that may expose your document.**
 
 .. code:: python
 
@@ -146,9 +152,46 @@ Updating
   collection.replace_one({'_id': primary_key}, doc)
   
 
+**The Upsert**
+
+By setting ``upsert=True`` within ``update_one`` or ``update_many``, Mongo will attempt to find a match to the document using the document filter provided.  If the document exists, an ``upsert`` with ``$set`` is performed as expected, otherwise, if the document is not found, it will be inserted, then the subsequent ``upset`` is performed on the new doc.
+
+With ``replace_one``, if no document matches the provided filter, that doc **is not** inserted.  Only the ``replacing doc`` will be inserted.
+
+.. code:: python
+  
+  # start fresh
+  things.drop()
+  
+  # using update
+  things.update_one({'thing':'apple'}, {'$set':{'color':'red'}}, upsert=True)
+  collection.update_many({'thing':'banana'}, {'$set':{'color':'yellow'}}, upsert=True)
+  
+  # only the replacing doc will be inserted if no match is found
+  things.replace_one({'thing':'pear'}, {'color':'green'}, upsert=True)
+  
+  > db.things.find()
+  { "_id" : ObjectId("56f71cbe3b6d1d66ca9717c7"), "thing" : "apple", "color" : "red" }
+  { "_id" : ObjectId("56f71cbe3b6d1d66ca9717c8"), "thing" : "banana", "color" : "yellow" }
+  { "_id" : ObjectId("56f71cbe3b6d1d66ca9717c9"), "color" : "green" }
+  > 
+
+
 Deleting
 ''''''''
 
+**Delete one**
+
+Use ``collection.delete_one(doc_criteria)`` to delete one document.  If multiple documents match your criteria, only the first one is removed.  
+
+**Delete many**
+
+Use ``collection.delete_many()`` to delete many documents.
+
+
+**find_and_modify**
+
+**RESEARCH** use this to prevent the window of attack when grabbing a document and updating a value.
 
 
 References
