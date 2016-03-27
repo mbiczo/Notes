@@ -18,6 +18,13 @@ PyMongo - Using Python 2.7
 
 PyMongo is a distribution containing tools for working with MongoDB and is recommended way to work with MongoDB from Python.  It must be imported to each Python script with ``import pymongo``
 
+
+Quick Import from JSON
+'''''''''''''''''''''''
+
+``mongoimport -d database_name -c collection_name < file.json``
+
+
 Finding Items
 '''''''''''''
 
