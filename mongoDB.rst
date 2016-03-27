@@ -49,6 +49,18 @@ Visit Mongo's page on `Operators`_ for additional features
 .. _Operators: https://docs.mongodb.org/manual/reference/operator/
 
 
+**Sorting**
+
+Sort returned results.  Use a `list` of `tuples` for compound sorting.
+
+.. code:: python
+
+  doc = collection.find_one(query).sort('grade', pymongo.ASCENDING)
+  
+  # multi-sort
+  doc = collection.find_one(query).sort([('grade', pymongo.ASCENDING), ('date', pymongo.DESCENDING)])
+
+
 **Find many itmes**
 
 Find all documents using ``collection.find()`` and a ``for`` loop only returning *projected* fields
@@ -199,6 +211,7 @@ Use ``collection.delete_many()`` to delete many documents.
 **find_and_modify**
 
 **RESEARCH** use this to prevent the window of attack when grabbing a document and updating a value.
+
 
 
 References
