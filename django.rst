@@ -34,6 +34,41 @@ Create url to define index **within <appname>** ``urls.py``
 Create url to point to page **within <myproject>** ``urls.py``
 	add url path and be sure to include() the respective apps urls script
 	
+Generic Views
+'''''''''''''
+Generic views abstract common patterns to the point where you don’t even need to write Python code to write an app.
+
+First add generic view to ``<appname>/urls.py`` as such:
+
+.. code:: python
+
+	from django.conf.urls import url
+
+	from . import views
+
+	# assign app namespace
+	app_name = 'polls'
+	
+	urlpatterns = [
+	    # add views.IndexView here
+	    url(r'^$', views.IndexView.as_view(), name='index'),
+	]
+
+Next, update the ``views.py`` file in your <appname> directory as such:
+
+.. code:: python
+
+	class IndexView(generic.ListView):
+		template_name = 'polls/index.html'
+    		context_object_name = 'latest_question_list'
+		def get_queryset(self):
+		        '''
+		        Return the last five published questions.
+		        '''
+		        return Question.objects.order_by('-pub_date')[:5]
+
+
+	
 URLs - Setting the path
 ''''''''''''''''''''''''
 After adding a view to the ``<app>``, you must update the ``urlpatterns`` variable within the ``urls.py`` file.
@@ -175,4 +210,10 @@ Basic example of a form being added to ``detail.html``
 		<input type= "submit" value= "Vote" />
 	</form>
 
+
+**NOTE - Always return an HttpResponseRedirect after successfully dealing with POST data.  This prevents data from being posted twice if the user hits the Back button.**
+
+**NOTE - If 2 users pull the same data to update, there may be write conflicts.  In web development, this is called race conditions.  In order to these, visit the page on using F() expressions in queries.**
+
+https://docs.djangoproject.com/en/1.9/topics/db/queries/#using-f-expressions-in-filters
 
