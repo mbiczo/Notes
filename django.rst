@@ -1,7 +1,7 @@
 Django Project/App Quick Reference
 ==================================
 
-This document contains a loose workflow as well as reference notes to create a basic Django project and application.  The following code is based off ``Django 1.9.4``.  Also, this code has neither been extensively tested, nor claims best practices.  This is a work in progress.  The following code was also ran under a ``virtualenv``.  The following steps assumes proper installation.
+This document contains a loose workflow as well as reference notes to create a basic Django project and application.  The following examples are based off ``Django 1.9.4``.  Also, these scripts have neither been extensively tested, nor claim to show best practices.  This is a work in progress.  The following was also ran under a ``virtualenv``, and assume proper installation.
 
 
 First Steps
@@ -9,19 +9,19 @@ First Steps
 
 **Create Project Shell**
 
-	``$ django-admin startproject <myproject>``
+``django-admin startproject <myproject>``
 
 **Create App Shell**
 
-	``$ python manage.py startapp <appname>``
+``python manage.py startapp <appname>``
 
 **Run Dev Server**
 
-	``$ python manage.py runserver``
+``python manage.py runserver``
 	
 **Invoke Python (Django) interactive shell**
 
-	``$ python manage.py shell``
+``python manage.py shell``
 
 
 Views - What users do
@@ -31,16 +31,17 @@ Each view is responsible for doing one of two things: returning an HttpResponse 
 
 **Create first View** (contains page content for now)
 
-	edit the views.py script by defining a function returning an HttpResponse()
+edit the views.py script by defining a function returning an HttpResponse()
 
 **Create url to define index within** ``<appname>`` ``urls.py``
 
-	add index to ``urlpatterns`` in ``urls.py``
+add index to ``urlpatterns`` in ``urls.py``
 
 **Create url to point to page within** ``<myproject>`` ``urls.py``
 
-	add url path and be sure to include() the respective apps urls script
+add url path and be sure to include() the respective apps urls script
 	
+
 Generic Views
 '''''''''''''
 Generic views abstract common patterns to the point where you don’t even need to write Python code to write an app.
@@ -133,19 +134,19 @@ Define models within ``<appname>.models.py``
 
 **Install app by editing the** ``settings.py`` ``INSTALLED_APPS``
 
-	``<appname>.apps.PollsConfig``
+``<appname>.apps.PollsConfig``
 
 **Store data model changes by creating a migration**
 
-	``$ python manage.py makemigrations <appname>``
+``python manage.py makemigrations <appname>``
 
 **Validate and View SQL code for migration**
 
-	``$ python manage.py sqlmigrate <appname> 0001`` (or whatever id)
+``python manage.py sqlmigrate <appname> 0001`` (or whatever id)
 
 **Commit model changes**
 
-	``$ python manage.py migrate``
+``python manage.py migrate``
 
 
 Templates - What users see
@@ -219,10 +220,42 @@ Must register the model within the ``<appname>/admin.py`` script as follows:
 	  
 	admin.site.register(Question)
 	
+**Modifying Admin Page**
 
-u:admin
+There are several things you can do to customize the Admin look and feel.  For all features, visit the oficial Django documentation regarding `The Django admin site`_  For now, here is an example of a ``admin.py`` file with a few implementations:
 
-p:Don't Forget!
+.. _The Django admin site: https://docs.djangoproject.com/en/1.9/ref/contrib/admin/
+
+.. code:: python
+
+	from django.contrib import admin
+	from .models import Choice, Question
+	
+	# Register your models here.
+	class ChoiceInline(admin.TabularInline):  # use StackedInline to stack items
+	    model = Choice
+	    extra = 3
+	
+	class QuestionAdmin(admin.ModelAdmin):
+	    # For many fields, use fieldsets
+	    fieldsets = [
+	            (None,                  {'fields': ['question_text']}),
+	            ('Date information',    {'fields': ['pub_date']}),
+	    ]
+	
+	    # Tell Django that Choice objects are edited on the Question admin page.
+	    inlines = [ChoiceInline]
+	
+	    # Tell Django to include individual fields on page
+	    list_display = ('question_text', 'pub_date', 'was_published_recently')
+	
+	    # Tell Django to add a 'filter' option sidebar
+	    list_filter = ['pub_date']
+	
+	    # Add search capability
+	    search_fields = ['question_text']
+	
+	admin.site.register(Question, QuestionAdmin)
 	
 
 Forms
@@ -253,7 +286,20 @@ Basic example of a form being added to ``detail.html``
 
 **NOTE - Always return an HttpResponseRedirect after successfully dealing with POST data.  This prevents data from being posted twice if the user hits the Back button.**
 
-**NOTE - If 2 users pull the same data to update, there may be write conflicts.  In web development, this is called race conditions.  In order to these, visit the page on using F() expressions in queries.**
+**NOTE - If 2 users pull the same data to update, there may be write conflicts.  In web development, this is called race conditions.  In order to these, visit the page on** `using F() expressions in queries`_.
 
-https://docs.djangoproject.com/en/1.9/topics/db/queries/#using-f-expressions-in-filters
+
+.. _using F() expressions in queries: https://docs.djangoproject.com/en/1.9/topics/db/queries/#using-f-expressions-in-filters
+
+
+Further Reading
+'''''''''''''''
+
+This is the end of the basics.  For more in-depth documentation on specific topics, visit the `Django Topics page`_.
+
+.. _Django Topics page: https://docs.djangoproject.com/en/1.9/topics/
+
+
+
+
 
