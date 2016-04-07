@@ -98,6 +98,25 @@ Sparse indexes occur when not all keys being indexed are present in the data.  T
 ``db.collection.createIndex({<field>, <direction>}, {sparse: true})``
 
 
+Full Text Search Index
+''''''''''''''''''''''
+
+Allows for easier text search and parsing in documents that have small or large strings.  To create a full text search index, use the following command with the **text** argument:
+
+``db.collection.ensureIndex({'<field>':'text'})``
+
+To use the newly created index:
+
+``db.collection.find({$text:{$search: '<string>'}})``
+
+For multi-word search:
+
+``db.collection.find({$text:{$search: '<string> <string> <string>'}})``
+
+To have Mongo attempt to sort the documnets in order of search match *importance*, use the ``$meta: 'textScore'`` argument in conjunction with the ``sort()`` method like this:
+
+``db.collection.find({$text:{$search: 'dog tree obsidian'}}, {score: {$meta: 'textScore'}}).sort({score: {$meta: 'textScore'}})``
+
 When to create Indexes?
 '''''''''''''''''''''''
 There are 2 options when to create your indexes in MongoDB.  **Foreground** is the default, otherwise you can choose **Background**
@@ -118,12 +137,43 @@ To create an index in the background, set the *background* option to true:
 ``db.collection.createIndex({<field>: <direction>}, {background: true})``
 
 
+Slow Queries
+''''''''''''
+
+MongoDB by default logs all *slow* queries, or queries that take longer than **100ms** in the text logs.
+
+Also, you can use the **Profiler** to log various levels of debugging.  Start up mongod like the following:
+
+``mongod -dbpath \path\to\db --profile <level> --slowms <int>``
+
+The levels are as follows:
+
+* 0 - None
+* 1 - Slow Queries, specify number of ms with ``--slowms``
+* 2 - All queries
+
+
 Using Explain
 '''''''''''''
 Use ``explain()`` to find out vital information regarding database statistics and query execution plans.  Returns an *explainable object*
 
 ``db.collection.explain().find(<somequery>)``
 
+
+mongotop & mongostat
+''''''''''''''''''''
+
+**mongotop**
+
+Taken from the Unix ``top`` command that shows the CPUs most expensive processes, Mongo has a similar command called ``mongotop <int>`` that shows what MongoDB is spending most of its time on.  To see Mongo's top processes for 10 seconds, call the following from the command line:
+
+``$ mongotop 10``
+
+**mongostat**
+
+Shows the db statistics **in  1 second interval** for *inserts*, *updates*, *deletes*, etc...   It can be called from the command line as such:
+
+``$ mongostat``
 
 
 PyMongo - Using Python 2.7
@@ -324,6 +374,15 @@ Use ``collection.delete_many()`` to delete many documents.
 **find_and_modify**
 
 **RESEARCH** use this to prevent the window of attack when grabbing a document and updating a value.
+
+
+Sharding
+--------
+
+Split data among different Mongo servers to distribute the workload using **mongos**.  A *shard key* should be provided for higher efficiency, and so that extra broadcasting is not occuring.
+
+
+
 
 
 
