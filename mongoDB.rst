@@ -62,13 +62,13 @@ To **create** an index on a collection named *students*, havingthe index key be 
 
 ``db.students.createIndex({"class": 1, "student_id": 1})``
 
-To **view** all current indexes on a collection:
+To **get** all current indexes on a collection:
 
 ``db.collection.getIndexes()``
 
-To **delete** or remove an Index on a collection:
+To **drop** or remove an Index on a collection:
 
-``db.collection.dropIndex({<indexName>})``
+``db.collection.dropIndex({ 'key': <value_direction>})``
 
 Multikey Indexes
 ''''''''''''''''
@@ -155,9 +155,23 @@ The levels are as follows:
 
 Using Explain
 '''''''''''''
-Use ``explain()`` to find out vital information regarding database statistics and query execution plans.  Returns an *explainable object*
+Use ``.explain()`` to find out vital information regarding database statistics and query execution plans.  Returns an *explainable object*
+
+**queryPlanner**
+
+Returned by default.  Shows query plan information including the *winning plan* that was executed and indexes used, if any:
 
 ``db.collection.explain().find(<somequery>)``
+
+**executionStats**
+
+Returns statistics on number of documents examined, keys examined, documents returned, execution time, ect:
+
+``db.collection.explain('executionStats').find(<somequery>).sort(<sortlogic>)``
+
+
+
+
 
 
 mongotop & mongostat
