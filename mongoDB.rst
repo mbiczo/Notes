@@ -56,7 +56,11 @@ To use:
 Indexes
 -------
 
-Indexes are one of the single most important things you can do to optimize read queries.  However, maintaining indexes does slow writes.
+Indexes are one of the single most important things you can do to optimize read queries.  However, maintaining indexes does slow writes, technically.  Be sure to review and understand examples of creating `indexes to support your queries`_ and `using indexes to sort your queries`_.  Here are basics:
+
+.. _indexes to support your queries: https://docs.mongodb.org/manual/tutorial/create-indexes-to-support-queries/
+
+.. _using indexes to sort your queries: https://docs.mongodb.org/manual/tutorial/sort-results-with-indexes/
 
 To **create** an index on a collection named *students*, havingthe index key be *class, student_name*:
 
