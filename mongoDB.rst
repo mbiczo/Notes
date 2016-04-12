@@ -394,6 +394,33 @@ Use ``collection.delete_many()`` to delete many documents.
 **RESEARCH** use this to prevent the window of attack when grabbing a document and updating a value.
 
 
+Aggregation
+-----------
+
+Aggregation in MongoDB is similar to SQL's `GROUP BY` clause where you can perform sums, averages, min, max and much more.  The framework contains a series of events or *stages* such as ``$group``, ``$match``, ``$limit``, ``$sort`` & ``$project`` to name a few.  Be sure to familiarize yourself with the various `stages of the aggregation framework`_.
+
+.. _stages of the aggregation framework: https://docs.mongodb.org/manual/meta/aggregation-quick-reference/
+
+**Note:** To use ``$text`` in the ``$match`` stage, the ``$match`` stage has to be the first stage of the pipeline.
+
+**Note:** All stages are limited by **100MBs** of RAM by default.  This can be changed using *Aggregation Options*
+
+Aggregation Options
+'''''''''''''''''''
+
+Use various *options* to enhance the aggregation framework:  Options can include:
+
+* ``{explain: true}``  *javascript*
+* ``{allowDiskUse: true}``  *javascript*
+* ``{cursor= {}}``  *python*
+
+Aggregation Limitations
+'''''''''''''''''''''''
+
+* 100MB limit for pipline stages
+* 16MB limit for documents
+* Sharding issues with 
+
 Sharding
 --------
 
@@ -406,6 +433,8 @@ Split data among different Mongo servers to distribute the workload using **mong
 
 References
 ----------
-BSON reference: http://bsonspec.org/
+`BSON reference`_ 
+
+.. _BSON reference: http://bsonspec.org/
 
     
