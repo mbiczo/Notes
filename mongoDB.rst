@@ -420,15 +420,75 @@ Shows the db statistics **in  1 second interval** for *inserts*, *updates*, *del
 
 ``$ mongostat``
 
+Application Engineering
+-----------------------
+
+
+Replication
+'''''''''''
+Replication, or duplication of data, can help solve the issues of **availability** and **fault tolerance**.  Typically a **replica set** is a group of *at least 3* nodes or computers that, if one were to fail, the other 2 can elect a PRIMARY node.  Replication in MongoDB is **asynchronous**.
+
+Research **Seed Lists**
+
+**Node Types**
+
+* Regular
+* Arbiter (voting node, no data)
+* Delayed/Regular (cannot be elected primary, but participate in elections)
+* Hidden (not primary, ex: used for analytics, but can  participate in elections)
+
+Failover & Rollback
+'''''''''''''''''''
+During a failover (typically 1-3 seconds) MongoDB **cannot** perform reads or writes.  Rollback can possibly happen during a failover if/when the old PRIMARY comes back online as a SECONDARY and its data does not match the new primary.  RESEARCH MORE.
+
+Be sure to include a *retry loop* catching any ``AutoReconnect`` errors, and wait a few seconds before retrying.  When inserting, be sure to check for ``DuplicateKey`` errors as well!
+
+Write Concerns
+''''''''''''''
+Research setting write settings...
+
+Research ``w`` and ``j`` parameters
+
+Read Preference
+'''''''''''''''
+Set the default node type that Mongo tries to read from.
+
+**Preference Types**
+
+* Primary
+* PrimaryPreferred
+* Secondary
+* SecondaryPreferred
+* Nearest
 
 Sharding
 --------
 
-Split data among different Mongo servers to distribute the workload using **mongos**.  A *shard key* should be provided for higher efficiency, and so that extra broadcasting is not occuring.
+Split data among different Mongo servers to distribute the workload using the ``mongos`` router.  A **shard key** should be provided for higher efficiency, and so that extra broadcasting is not occuring.  Typically, each *shard* node is also a *replica set*.
+
+Implications of Sharding
+''''''''''''''''''''''''
+* Every doc must include a **shard key**
+* Shard Key is *immutable*
+* Shard key has to be specified - multi or not
 
 
+Choosing a Shard Key
+''''''''''''''''''''
 
+* Sufficient Cardinality - so that there are enough unique values to be distributed to other nodes
+* Not monotonic (increasing) - It may **hotspotting** one node (or last node) in shard
 
+Mapping Data
+''''''''''''
+
+**Range Based**
+
+Splitting up the data evenly by range.
+
+**Hash Based**
+
+*research*
 
 
 References
