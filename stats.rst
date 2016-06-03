@@ -3,7 +3,7 @@ Statistics, 4th Ed.
 Personal random notes based off the book, *Statistics, 4th Edition*, by David Freedman, Robert Pisani & Roger Purves.
 
 What is Statistics?
-'''''''''''''''''''
+-------------------
 
 *Statistics is the art of making numerical conjectures about puzzling questions.*
 
