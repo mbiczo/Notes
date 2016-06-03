@@ -1,6 +1,11 @@
 Statistics, 4th Ed.
 ===================
+Personal random notes based off the book, *Statistics, 4th Edition*, by David Freedman, Robert Pisani & Roger Purves.
 
+What is Statistics?
+'''''''''''''''''''
+
+*Statistics is the art of making numerical conjectures about puzzling questions.*
 
 Study Design
 ------------
@@ -24,10 +29,17 @@ This basic method is to divide a population into *control* and *treatment* group
 
 Observational Studies
 '''''''''''''''''''''
-In observational studies, the *subjects* assign themselves to which group they will be a part of rather than in *controlled* experiments where the *investigators* assign the subjects to each group.  An example usually includes studies on smoking - where subjects naturally have that behavior rather than taking up smoking for 10 years for some data points.
+In observational studies, the *subjects* assign themselves to which group they will be a part of while investigators just watch, rather than in *controlled* experiments where the *investigators* assign the subjects to each group.  For example, studies on smoking - subjects would not begin smoking and continue for 10 years just to collect data.  However, in the same way as controlled experiments, the investigators still use the treatment-control idea.
+
+Statisticians talk about *controlling* confounding hidden factors.  In the above example controlling age and sex factors by comparing only smoking males to non-smoking males and ages 50-55, respectively.
 
 
+**Things to Note:**
 
+* There is a strong *association* between smoking and disease.
+* *association* is **not** the same as *causation* 
+* There may be *counding* factors that are contributing to the disease.
+* Good observational studies *control* for confounding variables.
 
 
 
