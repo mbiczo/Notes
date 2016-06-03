@@ -11,7 +11,7 @@ Controlled Experiments
 
 **Comparison**
 
-This basic method is to divide a population into *control* and *treatment* groups.  The *treatment* group receives the test, and the control group remains unchanged.  The measurments or responses of both groups are then *compared*.
+This basic method is to divide a population into *control* and *treatment* groups.  The *treatment* group receives the test, and the control group remains unchanged.  The measurements or responses of both groups are then *compared*.
 
 **Things to Note:**
 
@@ -22,7 +22,9 @@ This basic method is to divide a population into *control* and *treatment* group
 * If the treatment and control differ, the results are likely to be *confounded* with the effect of the treatment.
 
 
-
+Observational Studies
+'''''''''''''''''''''
+In observational studies, the *subjects* assign themselves to which group they will be a part of rather than in *controlled* experiments where the *investigators* assign the subjects to each group.  An example usually includes studies on smoking - where subjects naturally have that behavior rather than taking up smoking for 10 years for some data points.
 
 
 
