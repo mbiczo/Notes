@@ -9,7 +9,7 @@ What is Statistics?
 
 Study Design
 ------------
-Study design, or the designing of experiments, is the most important topic in Statistics.  Without careful consideration, all following data collected could be biased, and therefore unreliable, or even false.  There are various methods and best practices to test a hypothesis by gathering data.
+Study design, or the designing of experiments, is one of the most important topics in Statistics.  Without careful consideration, all following data collected could be biased, and therefore unreliable, or even false.  There are various methods and best practices to test a hypothesis by gathering data.
 
 Controlled Experiments
 '''''''''''''''''''''''
@@ -31,11 +31,12 @@ Observational Studies
 '''''''''''''''''''''
 In observational studies, the *subjects* assign themselves to which group they will be a part of while investigators just watch, rather than in *controlled* experiments where the *investigators* assign the subjects to each group.  For example, studies on smoking - subjects would not begin smoking and continue for 10 years just to collect data.  However, in the same way as controlled experiments, the investigators still use the treatment-control idea.
 
-Statisticians talk about *controlling* confounding hidden factors.  In the above example controlling age and sex factors by comparing only smoking males to non-smoking males and ages 50-55, respectively.
+Statisticians talk about *controlling* confounding hidden factors.  In the above example controlling age and sex factors by comparing only smoking males to non-smoking males and ages 50-55, respectively, and so on...
 
 
 **Things to Note:**
 
+* Observational comparisons can be quite misleading.
 * There is a strong *association* between smoking and disease.
 * *association* is **not** the same as *causation* 
 * There may be *counding* factors that are contributing to the disease.
