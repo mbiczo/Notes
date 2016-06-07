@@ -43,9 +43,14 @@ Statisticians talk about *controlling* confounding hidden factors.  In the above
 * Good observational studies *control* for confounding variables.
 
 
+Descriptive Statistics
+-----------------------
 
 
+Histogram
+'''''''''
 
+In a *historam*, the areas of the blocks represent precentages.
 
 
 
