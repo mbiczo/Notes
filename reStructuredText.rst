@@ -50,6 +50,6 @@ Let's create a hyperlink and go to the `Hackerrank`_
 .. _Hackerrank: https://www.hackerrank.com/
 
 
-This scentance has a footnote - please refer to [GitHub]_ for more info
+This sentance has a footnote - please refer to [GitHub]_ for more info
 
 .. [GitHub] This is the GitHub footnote
