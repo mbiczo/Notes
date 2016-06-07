@@ -50,7 +50,25 @@ Descriptive Statistics
 Histogram
 '''''''''
 
-In a *historam*, the areas of the blocks represent precentages.
+Histograms are used to help summarize and describe various questions about population distributions.
+
+In a historam, the *areas* of the blocks represent *precentages*.  The **endpoint convention** includes the rule on what to do with a data point that falls on the boundary between two class intervals.  For example a footnote may say, 'the class intervals *include* the left endpoint'
+
+**Drawing a histogram**
+
+1. Start with a *distribution table* (shown below).  
+
+================   ===========
+Income Level       Percentage
+================   ===========
+$0-$1,000          1%
+$1,000-$2,000      3% 
+...                ...
+$50,000 and over   10%
+================   ===========
+
+2. Make sure the x-axis has an even distribution or is *linear*
+3. To find the *height* of a block over a *class interval*, divide the percentage by the length of th interval
 
 
 
