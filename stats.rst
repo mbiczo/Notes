@@ -90,13 +90,15 @@ Variable types are categorized as follows:
 
 * Qualitative, or descriptive such as sex, occupation, etc...
 
-* Quantitative, or a number such as age or family size. These can be *continous* or *discrete*
+* Quantitative, or a number such as age or family size. These can be *continuous* or *discrete*.
 
-    - Discrete variables only differ from fixed (whole) amounts such as in family size 0, -1, 2 more people.
-    - Continous variables such as age can be arbitrairly small.  3 years, 2 months, 33 seconds, etc..
+  - Discrete variables only differ from fixed (whole) amounts such as in family size 0, -1, 2 more people.
+  - Continuous variables such as age can be arbitrarily small.  3 years, 2 months, 33 seconds, etc..
     
-When drawing a Histogram with continous variables, be sure to consider the *endpoint convention*.  When working with discrete variables, the common solution is to center the values at each class interval.
+When drawing a Histogram with continuous variables, be sure to consider the *endpoint convention*.  When working with discrete variables, the common solution is to center the values at each class interval.
 	
+
+
 
 
 
