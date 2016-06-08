@@ -1,3 +1,4 @@
+
 Statistics, 4th Ed.
 ===================
 Personal random notes based off the book, *Statistics, 4th Edition*, by David Freedman, Robert Pisani & Roger Purves.
@@ -52,7 +53,7 @@ Histogram
 
 Histograms are used to help summarize and describe various questions about population distributions.
 
-In a historam, the *areas* of the blocks represent *precentages* which should add up to 100%.  The **endpoint convention** includes the rule on what to do with a data point that falls on the boundary between two class intervals.  For example a footnote may say, 'the class intervals *include* the left endpoint'
+In a histogram, the *areas* of the blocks represent *percentages* which should add up to 100%.  The **endpoint convention** includes the rule on what to do with a data point that falls on the boundary between two class intervals.  For example a footnote may say, 'the class intervals *include* the left endpoint'
 
 **Drawing a histogram**
 
@@ -81,19 +82,25 @@ To help illustrate your data a vertical scale can help.  In some cases a *densit
 **NOTE** In a histogram, the heights of the block represents *crowding*, or percentage per horizontal unit.
 
 
+**Variables**
 
-Levels of Measurement
-----------------------
-* Categorical
-	- Nominal
-	- Ordinal
-* Quantitative
-	- Interval
-	- Ratio
+In Statistics, a *variable* is a characteristic which changes from observation to observation.  For example, a person's age, sex, family size, occupation, income, etc...
 
-Presenting Data
----------------
+Variable types are categorized as follows:
 
-* Frequency Tables
-	- Pie Chart
-	- Bar Chart
+* Qualitative, or descriptive such as sex, occupation, etc...
+
+* Quantitative, or a number such as age or family size. These can be *continous* or *discrete*
+
+    - Discrete variables only differ from fixed (whole) amounts such as in family size 0, -1, 2 more people.
+    - Continous variables such as age can be arbitrairly small.  3 years, 2 months, 33 seconds, etc..
+    
+When drawing a Histogram with continous variables, be sure to consider the *endpoint convention*.  When working with discrete variables, the common solution is to center the values at each class interval.
+	
+
+
+
+
+
+
+
