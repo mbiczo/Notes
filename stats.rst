@@ -76,6 +76,7 @@ $50,000 and over   10%
 
 .. image:: /img/stats/Histogram1.png
 
+
 Density Scale
 '''''''''''''
 
@@ -116,9 +117,17 @@ Another way to display histogram data could be a *cross-tab* or tabulation table
 .. image:: /img/stats/crosstab.png
 
 
+The Average and Standard Deviation
+-----------------------------------
+
+Two words that help to simplify these ideas could be *center* and *spread*.
+
+Center
+''''''
 
 
-
+Spread
+''''''
 
 
 
