@@ -49,13 +49,14 @@ Descriptive Statistics
 
 
 Histogram
-'''''''''
+---------
 
 Histograms are used to help summarize and describe various questions about population distributions.
 
 In a histogram, the *areas* of the blocks represent *percentages* which should add up to 100%.  The **endpoint convention** includes the rule on what to do with a data point that falls on the boundary between two class intervals.  For example a footnote may say, 'the class intervals *include* the left endpoint'
 
-**Drawing a histogram**
+Drawing a histogram
+'''''''''''''''''''
 
 1. Start with a *distribution table* (shown below).  
 
@@ -75,14 +76,16 @@ $50,000 and over   10%
 
 .. image:: /img/stats/Histogram1.png
 
-**Density Scale**
+Density Scale
+'''''''''''''
 
 To help illustrate your data a vertical scale can help.  In some cases a *density scale* may be a good choice.  A density scale includes the percentage *per unit on the x-axis*.  For example, if the x-axis is shown in years, then a vertical (y-axis) of Percent by year may be appropriate.  Necessary scaling and area assignment is necessary.
 
 **NOTE** In a histogram, the heights of the block represents *crowding*, or percentage per horizontal unit.
 
 
-**Variables**
+Variables
+'''''''''
 
 In Statistics, a *variable* is a characteristic which changes from observation to observation.  For example, a person's age, sex, family size, occupation, income, etc...
 
@@ -97,6 +100,15 @@ Variable types are categorized as follows:
     
 When drawing a Histogram with continuous variables, be sure to consider the *endpoint convention*.  When working with discrete variables, the common solution is to center the values at each class interval.
 	
+Controlling for a Variable
+''''''''''''''''''''''''''
+
+
+
+
+
+
+
 
 
 
