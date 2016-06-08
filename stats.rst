@@ -100,8 +100,21 @@ Variable types are categorized as follows:
     
 When drawing a Histogram with continuous variables, be sure to consider the *endpoint convention*.  When working with discrete variables, the common solution is to center the values at each class interval.
 	
+
 Controlling for a Variable
 ''''''''''''''''''''''''''
+
+A quick note on controlling variables.  In an example, let's say, to *control* for age would mean to break out a general population into smaller sub-sets of age ranges so that other *coundounding* factors aren't at play - or skewing the numbers.
+
+
+Cross-Tabulation
+''''''''''''''''
+
+Another way to display histogram data could be a *cross-tab* or tabulation table.  A trimmed example from the book is shown below:
+
+
+.. image:: /img/stats/crosstab.png
+
 
 
 
