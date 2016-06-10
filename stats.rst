@@ -43,6 +43,17 @@ Statisticians talk about *controlling* confounding hidden factors.  In the above
 * There may be *counding* factors that are contributing to the disease.
 * Good observational studies *control* for confounding variables.
 
+Study Types
+'''''''''''
+
+Two types of studies are *cross-sectional* and *longitudinal*.
+
+In **cross-sectional** studies different subjects are compared to eachother during a snapshot in time.
+
+In **longitudinal** studies a subject is followed over time and compared with herself over time.
+
+**NOTE:**  If a study draws conclusions about the effects of age, find out whether the data are cross-sectional or longitudinal.
+
 
 Descriptive Statistics
 -----------------------
@@ -120,15 +131,29 @@ Another way to display histogram data could be a *cross-tab* or tabulation table
 The Average and Standard Deviation
 -----------------------------------
 
-Two words that help to simplify these ideas could be *center* and *spread*.
+In order to achieve a more drastic summary of your data - apart from only the Histogram - measuring the *center* and the *spread* around the center can help.
 
 Center
 ''''''
+Measurements of center can be found by calculating the *average* and/or the *median*.
 
+**Average**
+The *average* of a list of numbers equals their sum divided by how many there are.
+
+TODO: Add formula
+
+
+**Median**
+
+The *median* is the middle number when all numbers are lined up from smallest to largest.  If the list of numbers is even (meaning there are two center numbers), then add the two numbers together and divide by 2 to find the median.
 
 Spread
 ''''''
+The *standard deviation* measures spread around the average.  The *interquartile range* is another measure of spread.
 
+**Standard Deviation**
+
+**Interquartile Range (IQR)**
 
 
 
