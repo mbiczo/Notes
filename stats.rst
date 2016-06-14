@@ -147,11 +147,22 @@ TODO: Add formula
 
 The *median* is the middle number when all numbers are lined up from smallest to largest.  If the list of numbers is even (meaning there are two center numbers), then add the two numbers together and divide by 2 to find the median.
 
+**Root Mean Squared (RMS)**
+
+The RMS, also knows as the *quadratic mean*  is another tool that statisticians use to calculate the *size* of a series of numbers.  The calculation is its name backwards.  First, square the entries.  Next, take the mean of the newly calculated numbers, and finally, calculate the square root in order to find the RMS.
+
+
 Spread
 ''''''
 The *standard deviation* measures spread around the average.  The *interquartile range* is another measure of spread.
 
 **Standard Deviation**
+
+The standard deviationn tells how far away numbers on a list are from their average.  Most entries (~68%) will be around one (1) SD away from the average.
+
+The standard deviation is the RMS of their deviations from the average.  In other words, to calculate the SD from a list of numbers, first, find the average and calculate each number's deviation or distance from that average, then continue with the RMS calculation.
+
+TODO: add formula
 
 **Interquartile Range (IQR)**
 
