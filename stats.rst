@@ -151,6 +151,8 @@ The *median* is the middle number when all numbers are lined up from smallest to
 
 The RMS, also knows as the *quadratic mean*  is another tool that statisticians use to calculate the *size* of a series of numbers.  The calculation is its name backwards.  First, square the entries.  Next, take the mean of the newly calculated numbers, and finally, calculate the square root in order to find the RMS.
 
+TODO: add formula
+
 
 Spread
 ''''''
@@ -162,9 +164,20 @@ The standard deviationn tells how far away numbers on a list are from their aver
 
 The standard deviation is the RMS of their deviations from the average.  In other words, to calculate the SD from a list of numbers, first, find the average and calculate each number's deviation or distance from that average, then continue with the RMS calculation.
 
-TODO: add formula
+.. image:: /img/stats/SD_Equation_Alt.png
+
+
+
+**SD vs SD+**
+
+
+Research the difference between standard deviation (SD) and SD+.  A test would be to calculate the standard deviation of [-1, 1] and if the output equals 1, then the machine is using regular standard deviation.  If the output equals 1.41... it's using SD+
+
 
 **Interquartile Range (IQR)**
+
+TODO: add notes
+
 
 
 
