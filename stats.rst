@@ -1,6 +1,6 @@
 
-Statistics, 4th Ed.
-===================
+Statistics (Random Notes)
+==========================
 Personal random notes based off the book, *Statistics, 4th Edition*, by David Freedman, Robert Pisani & Roger Purves.
 
 What is Statistics?
@@ -140,7 +140,7 @@ Measurements of center can be found by calculating the *average* and/or the *med
 **Average**
 The *average* of a list of numbers equals their sum divided by how many there are.
 
-TODO: Add formula
+.. image:: /img/stats/AvgExample.png
 
 
 **Median**
