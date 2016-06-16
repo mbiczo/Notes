@@ -176,7 +176,7 @@ Research the difference between standard deviation (SD) and SD+.  A test would b
 
 **Interquartile Range (IQR)**
 
-TODO: add notes
+The IQR is useful in summarizing non-normal disturbutions, or data distributions that do not follow the Normal Curve - this will be described a bit more in-depth, but more on this later.  By definition, the Interquartile range is the data that lies between the 25th and 75th *percentile*.
 
 
 Normal Approximation for Data
@@ -184,6 +184,9 @@ Normal Approximation for Data
 
 The **The Normal Curve** was discovered during the development of the mathematics of chance.  Later, it was used as an ideal histogram to compare other data and histograms to.
 
+
+The Normal Curve
+'''''''''''''''''
 
 The equation has three of the most famous numbers in the history of mathematics as well as a familiar shape:
 
@@ -200,7 +203,17 @@ The areas under the normal curve between -3 and +3 is about 99.7%
 **NOTE**  A value is converted to *standard units* by seeing how many SDs it is above (+) or below (-) the average.
 
 
+Percentiles
+'''''''''''
 
+Not all distributions are *normal*.  Other examples may be *right-skewed* and *left-skewed*.  For these, statisticians often use **percentiles** to summarize the data.  Otherwise, if we applied the same math as above, we'd end up with the estimation that some families make negative income (-1.5 SDs)
+
+Also, as mentioned above, the *Interquartile Range (IQR)** is also helpful in summarizing these types of data shapes (having longer tails).  See an example of a *right-skewed* distribution below.
+
+
+.. image:: /img/stats/Right_Skewed_Dist.png
+
+.. image:: /img/stats/Percentile_Ex.png
 
 
 
