@@ -179,6 +179,27 @@ Research the difference between standard deviation (SD) and SD+.  A test would b
 TODO: add notes
 
 
+Normal Approximation for Data
+------------------------------
+
+The **The Normal Curve** was discovered during the development of the mathematics of chance.  Later, it was used as an ideal histogram to compare other data and histograms to.
+
+
+The equation has three of the most famous numbers in the history of mathematics as well as a familiar shape:
+
+.. image:: /img/stats/Normal_Curve_Equation.png
+
+.. image:: /img/stats/Normal_Curve.png
+
+**Normal Curve Features**
+
+The areas under the normal curve between -1 and +1 is about 68%
+The areas under the normal curve between -2 and +2 is about 95%
+The areas under the normal curve between -3 and +3 is about 99.7%
+
+**NOTE**  A value is converted to *standard units* by seeing how many SDs it is above (+) or below (-) the average.
+
+
 
 
 
