@@ -160,7 +160,7 @@ The *standard deviation* measures spread around the average.  The *interquartile
 
 **Standard Deviation**
 
-The standard deviationn tells how far away numbers on a list are from their average.  Most entries (~68%) will be around one (1) SD away from the average.
+The standard deviation tells how far away numbers on a list are from their average.  Most entries (~68%) will be around one (1) SD away from the average.
 
 The standard deviation is the RMS of their deviations from the average.  In other words, to calculate the SD from a list of numbers, first, find the average and calculate each number's deviation or distance from that average, then continue with the RMS calculation.
 
@@ -176,7 +176,7 @@ Research the difference between standard deviation (SD) and SD+.  A test would b
 
 **Interquartile Range (IQR)**
 
-The IQR is useful in summarizing non-normal disturbutions, or data distributions that do not follow the Normal Curve - this will be described a bit more in-depth, but more on this later.  By definition, the Interquartile range is the data that lies between the 25th and 75th *percentile*.
+The IQR is useful in summarizing non-normal distributions, or data distributions that do not follow the Normal Curve - this will be described a bit more in-depth, but more on this later.  By definition, the Interquartile range is the data that lies between the 25th and 75th *percentile*.
 
 
 Normal Approximation for Data
@@ -214,6 +214,35 @@ Also, as mentioned above, the *Interquartile Range (IQR)** is also helpful in su
 .. image:: /img/stats/Right_Skewed_Dist.png
 
 .. image:: /img/stats/Percentile_Ex.png
+
+
+Measurement Error
+------------------
+
+In the world, as things are measured repeatedly and with increasing precision, there will be eventual inconsistancy from measurement to measurement.  In other words, although 9.9999406 is very close to 9.9999399, they are still not equal.  In Statistics, this is typically known as the **Chance Error**.
+
+Chance Error
+''''''''''''
+
+The Chance Error is typically found by calculating the SD of the series of measurements.  This measurement is very useful in estimating the potential error on a *single* measurement.
+
+**individual measurement = exact value - chance error**
+
+
+Outliers
+''''''''
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
