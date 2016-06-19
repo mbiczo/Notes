@@ -240,20 +240,38 @@ In the world, as things are measured repeatedly and with increasing precision, t
 Chance Error
 ''''''''''''
 
-The Chance Error is typically found by calculating the SD of the series of measurements.  This measurement is very useful in estimating the potential error on a *single* measurement.
+Chance error stems from the *possibility* that a single measurement will be off by some random amount from the *exact* or true value.  This value can **sometimes be too large**, and **sometimes be too small**.  The Chance Error is typically found by calculating the SD of the series of measurements.  This measurement is very useful in estimating the potential error on a *single* measurement.
 
-**individual measurement = exact value - chance error**
+**Basic Equation**
+
+*individual measurement = exact value + chance error*
+
+
+
+
+Bias
+''''
+
+Bias or **systematic errors** affects *all* measurements **in the same direction** - either pushing them **all up** in the same direction, or **all down** in the same direction.  This is different from chance error in that, the error can sometimes be up and sometimes be down.
+
+**New Basic Equation**
+
+*individual measurement = exact value + bias + chance error*
+
+
 
 
 Outliers
 ''''''''
 
+Outliers are *extreme* measurements, although subjective, typically >3 SDs (+-) away from the average of a normal curve.  These measurements may or may not affect the average, but definitely increase the standard deviation.  Careful consideration should be made, because the observer can either **ignore** the outliers, or **concede** that his data does not follow the normal distribution curve.
 
 
 
+**NOTES**
 
-
-
+- In the long run, **chance errors** will **cancel out**
+- **Biases** will have a **long term effect** on the average.
 
 
 
