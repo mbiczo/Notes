@@ -216,6 +216,22 @@ Also, as mentioned above, the *Interquartile Range (IQR)** is also helpful in su
 .. image:: /img/stats/Percentile_Ex.png
 
 
+
+Change of Scale
+''''''''''''''''
+
+**Addition**
+
+Adding the *same number*, *x*, to every entry on a list *increases* the average by x, but the SD does not change.
+
+**Multiplication**
+
+Multiplying the *same number*, *x*, to every entry on a list *increases* the average and SD by a mulitple of x.
+
+
+
+
+
 Measurement Error
 ------------------
 
