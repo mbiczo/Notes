@@ -314,6 +314,12 @@ Remotes
 
 			(by default, the name will be the root directory name on GitHub)
 			
+	7. To clone only a subdirectory
+	
+		$ git clone <url> <desired path>
+		$ cd <desired path>
+		$ git filter-branch --prune-empty --subdirectory-filter <desired subdir> HEAD 
+			
 ***************
 Ignoring Files
 ***************
