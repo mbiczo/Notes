@@ -274,8 +274,14 @@ Outliers are *extreme* measurements, although subjective, typically >3 SDs (+-) 
 - **Biases** will have a **long term effect** on the average.
 
 
+Correlation
+------------
 
+Shows relationship between 2 variables.  A correlation coefficient is between -1 and 1.  Formally, the correlation coefficent is a measure of linear association, or clustering around a line.  A score of 0 means loose or no clustering.  
 
+.. image:: /img/stats/Correlation_Ex1.png
+
+.. image:: /img/stats/Correlation_Ex2.png
 
 
 
