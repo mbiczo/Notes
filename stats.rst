@@ -279,9 +279,27 @@ Correlation
 
 Shows relationship between 2 variables.  A correlation coefficient is between -1 and 1.  Formally, the correlation coefficent is a measure of linear association, or clustering around a line.  A score of 0 means loose or no clustering.  
 
-.. image:: /img/stats/Correlation_Ex1.png
+.. image:: /img/stats/Correlation_Ex1.PNG
 
-.. image:: /img/stats/Correlation_Ex2.png
+.. image:: /img/stats/Correlation_Ex2.PNG
+
+
+The SD Line
+'''''''''''
+
+The points in a scatter diagram generally seem to cluster around the *SD Line*.  The standard deviation line is drawn on a scatter plot by starting at the point where the average of x and average of y intercept.  The slope is constructed from the standard deviation in both the x and y directions.
+
+Computing the Correlation Coefficient
+''''''''''''''''''''''''''''''''''''''
+
+Convert each variable to standard units.  The average of the product gives the correlation coefficient.
+
+**r = average of (x in standard units) x (y in standard units)**
+
+
+
+
+
 
 
 
