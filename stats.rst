@@ -296,6 +296,22 @@ Convert each variable to standard units.  The average of the product gives the c
 
 **r = average of (x in standard units) x (y in standard units)**
 
+Note about the Correlation Coefficient
+'''''''''''''''''''''''''''''''''''''''
+
+The correlation coefficient, r, is a pure number, without units.  It is not affected by:
+
+* interchanging the two variables
+* adding the same number to all the values of one variable
+* multiplying all the values of one variabe by the same positive number
+
+Also, r measures *linear association* not association in general.
+
+
+**Changing SDs**
+
+r measures clustering **not** in *absolute* terms but in *relative* terms - relative to the standard deviations.  Example:  2 scatter charts could have the same correlation coefficient, however one may be much more tightly grouped becuase the standard deviation is lower than the other plot.
+
 
 
 
