@@ -315,6 +315,11 @@ Also, r measures *linear association* not association in general.
 r measures clustering **not** in *absolute* terms but in *relative* terms - relative to the standard deviations.  Example:  2 scatter charts could have the same correlation coefficient, however one may be much more tightly grouped becuase the standard deviation is lower than the other plot.
 
 
+Regression
+-----------
+
+The regression line for *y* on *x* estimates the average value for *y* corresponding to each value of *x*.
+
 
 
 
