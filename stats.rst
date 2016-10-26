@@ -277,7 +277,9 @@ Outliers are *extreme* measurements, although subjective, typically >3 SDs (+-) 
 Correlation
 ------------
 
-Shows relationship between 2 variables.  A correlation coefficient is between -1 and 1.  Formally, the correlation coefficent is a measure of linear association, or clustering around a line.  A score of 0 means loose or no clustering.  
+Shows relationship between 2 variables.  A correlation coefficient is between -1 and 1.  Formally, the correlation coefficent is a measure of linear association, or clustering around a line.  A score of 0 means loose or no clustering.
+
+**NOTE:**  Correlation measure association.  But association is not the same as causation.
 
 .. image:: /img/stats/Correlation_Ex1.PNG
 
