@@ -1,0 +1,5 @@
+G2 Reference for Michael
+=========================
+
+The purpose of this is to aggregate various ideas, topics and best practices when creating G2 Applications or working with G2 itself.
+
