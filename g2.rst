@@ -3,3 +3,49 @@ G2 Reference for Michael
 
 The purpose of this is to aggregate various ideas, topics and best practices when creating G2 Applications or working with G2 itself.
 
+What is G2?
+-----------
+
+G2 is an **intelligent real-time system (IRTS)** for developing and deploying mission-critical, client/server applications.
+
+Three Key Factors
+-----------------
+
+It's useful to ask yourself these three questions when creating G2 applications.
+
+1. Does my application have to **integrate with external data**?
+2. Does my domain require **user interaction**, possibly somewhere on the network?
+3. Does my environment have a **well-defined physical representation**?
+
+If you answer yes to all three of these, you will be using a large portion of G2's capabilities.
+
+Knowledge Base(s)
+-----------------
+
+G2 applications are stored in knowledge bases.  A **knowledge base** or **KB** is an ASCII file with a .kb extension that contains all the information your application needs to run.
+
+Modules
+-------
+
+A G2 application typically consist of numerous KB files, each containing one or more modules.  A **module** is a set of related information contained in a KB.  
+
+**TIP:** Use modules to organize your application and to also exercise the DRY principle.
+
+Modules can either be **independent** or **dependent**.  This represents whether or not they require other modules to run.
+
+You use the G2 Foundation Resource **(GFR)** module to help manage your modules in an application.  For example, which modules G2 initializes first and which modules determine the overall behavior of the application.
+
+The figure below shows several different module configurations of a video conferencing application.
+
+**<<insert figure AppLayout1>>**
+
+G2 Objects
+----------
+
+G2 is an object-oriented development environment.  The *item* class is the root of the G2 class hierarchy that you can customize to capture your domain knowledge and *object* is a subclass in the item class hierarchy.
+
+An **object** is a piece of information that contains all related knowledge in one location.  An object's data are called its **attributes** and an object's operations are called its **methods**.  Each object in the KB has an **icon** representation.  This means that you can use objects to communicate information graphically to the end-user.
+
+
+
+
