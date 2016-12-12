@@ -46,6 +46,12 @@ G2 is an object-oriented development environment.  The *item* class is the root 
 
 An **object** is a piece of information that contains all related knowledge in one location (same as other languages).  An object's data are called its **attributes** and an object's operations are called its **methods**  (nothing different there either).  Each object in the KB has an **icon** representation.  This means that you can use objects to communicate information graphically to the end-user.
 
+Workspaces
+----------
+
+All created items in G2 are placed on **workspaces**.  It is good practice to name your workspaces so that you can refer to them later.  
+
+
 Rules vs Procedures
 --------------------
 
