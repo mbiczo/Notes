@@ -44,7 +44,7 @@ G2 Objects
 
 G2 is an object-oriented development environment.  The *item* class is the root of the G2 class hierarchy that you can customize to capture your domain knowledge and *object* is a subclass in the item class hierarchy.
 
-An **object** is a piece of information that contains all related knowledge in one location.  An object's data are called its **attributes** and an object's operations are called its **methods**.  Each object in the KB has an **icon** representation.  This means that you can use objects to communicate information graphically to the end-user.
+An **object** is a piece of information that contains all related knowledge in one location (same as other languages).  An object's data are called its **attributes** and an object's operations are called its **methods**  (nothing different there either).  Each object in the KB has an **icon** representation.  This means that you can use objects to communicate information graphically to the end-user.
 
 Rules vs Procedures
 --------------------
