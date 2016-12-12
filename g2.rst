@@ -72,7 +72,14 @@ Useful Hotkeys
 
 **Admin**
 
-Change User Mode: Ctrl + y
+* Change User Mode: Ctrl + y
+
+**Display**
+
+* Expand/enlarge current window size to visible area: Alt + .
+* Return current window to default size: Ctrl + .
+
+
 
 
 
