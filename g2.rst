@@ -58,6 +58,16 @@ Rules vs Procedures
 
 *add section describing the pros/cons*
 
+Relationships
+-------------
+
+<add notes>
+
+Connections
+-----------
+
+<add notes>
+
 Inspect
 -------
 
