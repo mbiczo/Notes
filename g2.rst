@@ -51,6 +51,7 @@ Workspaces
 
 All created items in G2 are placed on **workspaces**.  It is good practice to name your workspaces so that you can refer to them later.  
 
+**Note:** Be sure to set the 'Top level module' if not already set.
 
 Rules vs Procedures
 --------------------
