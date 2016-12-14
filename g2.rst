@@ -56,7 +56,14 @@ All created items in G2 are placed on **workspaces**.  It is good practice to na
 Rules vs Procedures
 --------------------
 
-*add section describing the pros/cons*
+Procedures
+'''''''''''
+
+**Procedures** allow you to create a set of *sequential* actions that need to be performed several times in varied situations and/or different data values.  Procedures may be started many ways including: other procedures, rules, or an action button initiated by a user.
+
+Specifically, a procedure is executed when it appears in a *call* statement or a *start* action.  A procedure executes *synchronously* when called and *asynchronously* when started.
+
+
 
 Relationships
 -------------
