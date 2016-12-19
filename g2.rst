@@ -56,6 +56,19 @@ All created items in G2 are placed on **workspaces**.  It is good practice to na
 Rules vs Procedures
 --------------------
 
+Rules
+'''''
+
+**Rules** help improve the application's ability to automate decision-making and respond to recognized events and changes in data.
+
+* A rule can start with the *whenever* statement and can detect several events including when some attribute *receives a value* (meaning that its value has just been affected through some *conclude* action).  Other events can include when an item is moved on the workspace, and instance of some class is created, or two items become related or unrelated based on some user-defined relationship definition.
+
+* Rules can refer to specific items, but it is best to make them generic.
+
+* Every rules 'second half' (consequent) starts with the *then* keyword.  This can include multiple actions using the *and* keyword.
+
+
+
 Procedures
 '''''''''''
 
