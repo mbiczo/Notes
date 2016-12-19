@@ -49,7 +49,9 @@ An **object** is a piece of information that contains all related knowledge in o
 Workspaces
 ----------
 
-All created items in G2 are placed on **workspaces**.  It is good practice to name your workspaces so that you can refer to them later.  
+All created items in G2 are placed on **workspaces**.  It is good practice to name your workspaces so that you can refer to them later. Once you name workspaces, they can easily be accessed through the Get Workspace menu item.  A possible good layout may look as follows:
+
+.. image:: /img/g2/WorkspaceLayout1.png
 
 **Note:** Be sure to set the 'Top level module' if not already set.
 
