@@ -80,10 +80,10 @@ Inspect
 
 The **inspect tool** is a powerful tool available within G2 in order to perform many useful commands.  Some of the useful commands are as follows:
 
-	* Highlight
-	* Replace
-	* Show
-	* Go To
+* Highlight
+* Replace
+* Show
+* Go To
 
 Useful Hotkeys
 --------------
@@ -95,7 +95,9 @@ Useful Hotkeys
 **Display**
 
 * Expand/enlarge current window size to visible area: Alt + .
-* Return current window to default size: Ctrl + .
+* Return current window to default size and center: Ctrl + .
+* Enlarge current window viewing scale (bigger): Ctrl + B
+* Reduce current window viewig scale (smaller): Ctrl + S
 
 
 
