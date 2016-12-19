@@ -76,6 +76,8 @@ Procedures
 
 Specifically, a procedure is executed when it appears in a *call* statement or a *start* action.  A procedure executes *synchronously* when called and *asynchronously* when started.
 
+**Note** If using the *create* action along with the *transfer* action within something like a procedure to programatically create and move that  instance's icon to another workspace, for example, these instances are transient.  **Transient** instances are not considered a permanent part of the application's knowkedge and therefore will be deleted when Restarting G2 and will not be saved when you choose save kb.
+
 
 
 Relationships
