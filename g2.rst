@@ -37,7 +37,7 @@ You use the G2 Foundation Resource **(GFR)** module to help manage your modules 
 
 The figure below shows several different module configurations of a video conferencing application.
 
-.. image:: /img/g2/AppLayout1.png
+.. image:: /img/g2/AppLayout1.PNG
 
 G2 Objects
 ----------
