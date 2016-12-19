@@ -67,7 +67,7 @@ Rules
 
 * Every rules 'second half' (consequent) starts with the *then* keyword.  This can include multiple actions using the *and* keyword.
 
-
+* A rule may start with *initially*, meaning that it evaluates upon every G2 start or restart or whenever its workspace is activated.  It remains inactive as long as G2 continues to run until the next Start/Restart.
 
 Procedures
 '''''''''''
