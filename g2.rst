@@ -95,12 +95,35 @@ Connections
 Inspect
 -------
 
-The **inspect tool** is a powerful tool available within G2 in order to perform many useful commands.  Some of the useful commands are as follows:
+The **inspect tool** is a powerful tool available within G2 in order to perform many useful commands.  Here are *a few* that may be helpful for...
 
-* Highlight
-* Replace
-* Show
-* Go To
+**...inspecting knowledge hierarchies**
+
+- show on a workspace the class hierarchy
+- show on a workspace the class hierarchy of variable
+- show on a workspace the workspace hierarchy
+
+**...displaying items**
+
+- show on a workspace every printer
+- show on a workspace every printer P such that the status of P = the symbol ok
+- go to main-printer
+- display a table [columnwise] of every printer
+- display a table of every rule
+
+**...text searches/replacements**
+
+- highlight true in every printer
+- highlight stat in every printer
+- replace the word ok with good in every procedure
+
+**...application consistency/ correctness**
+
+- show on a workspace every item with notes
+- show on a workspace every item with unsaved changes
+- show on a workspace every item whose status is inactive
+- show on a workspace every item whow status is disabled
+
 
 Useful Hotkeys
 --------------
