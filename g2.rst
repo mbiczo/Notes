@@ -88,16 +88,30 @@ The **inspect tool** is a powerful tool available within G2 in order to perform 
 Useful Hotkeys
 --------------
 
-**Admin**
 
-* Change User Mode: Ctrl + y
+Admin
+'''''
 
-**Display**
+=====================================================================================  ===========
+Description                                                                            Hotkey
+=====================================================================================  ===========
+Change User Mode                                                                       Ctrl + y
+<another description>                                                                  <hotkey>
+=====================================================================================  ===========
 
-* Expand/enlarge current window size to visible area: Alt + .
-* Return current window to default size and center: Ctrl + .
-* Enlarge current window viewing scale (bigger): Ctrl + B
-* Reduce current window viewig scale (smaller): Ctrl + S
+Display
+'''''''
+
+=====================================================================================  ===========
+Description                                                                            Hotkey
+=====================================================================================  ===========
+Expand/enlarge current window size to visible area:                                    Alt + .
+Return current window to default size and center:                                      Ctrl + .
+Enlarge current window viewing scale (bigger):                                         Ctrl + B
+Reduce current window viewig scale (smaller):                                          Ctrl + S
+=====================================================================================  ===========
+
+
 
 
 
