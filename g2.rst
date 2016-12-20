@@ -129,6 +129,21 @@ The **inspect tool** is a powerful tool available within G2 in order to perform 
 - show on a workspace every item whow status is disabled
 
 
+ProTools - A Developer's Toolbox
+---------------------------------
+
+The **protools.kb** module provides a set of developer tools and menus that alleviate some of the "busy work" out of testing and developing code.  It provides many shortcut features including ways to organizing workspaces and items and analyzing and formatting code.  Once merged with another kb, new functionality and menu items will appear in different lists, for example.
+
+Here are a few ideas of the new helpful functions:
+
+**launch procedure** will allow the developer to simulate values and test procedures without having to manually create action-buttons!
+**change others to match** will copy the item/icon to all others on workspace to match - like a *format painter*.
+
+Navigating to the PROTOOLS-TOP-LEVEL workspace will give you a good idea of what's available as shown below:
+
+.. image:: /img/g2/ProtoolsMenu1.png
+
+
 Useful Hotkeys
 --------------
 
