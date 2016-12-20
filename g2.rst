@@ -11,6 +11,11 @@ G2 is an **intelligent real-time system (IRTS)** for developing and deploying mi
 .. image:: /img/g2/G2ApplicationServer1.png
 
 
+Another strength of G2 is that it spans more of the Traditional Development Scope of Project Life Cycles:
+
+.. image:: /img/g2/G2DevScope1.png
+
+
 Three Key Factors
 -----------------
 
