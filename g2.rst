@@ -6,7 +6,10 @@ The purpose of this is to aggregate various ideas, topics and best practices whe
 What is G2?
 -----------
 
-G2 is an **intelligent real-time system (IRTS)** for developing and deploying mission-critical, client/server applications.
+G2 is an **intelligent real-time system (IRTS)** for developing and deploying mission-critical, client/server applications.  A graphic showing the **G2 Application Server** is below:
+
+.. image:: /img/g2/G2ApplicationServer1.png
+
 
 Three Key Factors
 -----------------
