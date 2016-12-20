@@ -153,6 +153,7 @@ Expand/enlarge current window size to visible area:                             
 Return current window to default size and center:                                      Ctrl + .
 Enlarge current window viewing scale (bigger):                                         Ctrl + B
 Reduce current window viewig scale (smaller):                                          Ctrl + S
+Drop current window to bottom (behind other windows)                                   Ctrl + V
 =====================================================================================  ===========
 
 
