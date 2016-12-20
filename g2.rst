@@ -136,8 +136,13 @@ The **protools.kb** module provides a set of developer tools and menus that alle
 
 Here are a few ideas of the new helpful functions:
 
-**launch procedure** will allow the developer to simulate values and test procedures without having to manually create action-buttons!
-**change others to match** will copy the item/icon to all others on workspace to match - like a *format painter*.
+- **launch procedure** is available when right-clicking on a procedure, and will allow the developer to simulate values and test procedures without having to manually create action-buttons!
+
+- **change others to match** will copy the item/icon to all others on workspace to match - like a *format painter*.
+
+- **reformat procedure** will re-format the code to help with readability.
+
+- **Arrange Workspace**  is available on the workspace level, and will perform a basic analysis of the workspace items and aligns them.
 
 Navigating to the PROTOOLS-TOP-LEVEL workspace will give you a good idea of what's available as shown below:
 
