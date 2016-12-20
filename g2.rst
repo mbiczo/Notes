@@ -80,6 +80,10 @@ Specifically, a procedure is executed when it appears in a *call* statement or a
 
 **Note** If using the *create* action along with the *transfer* action within something like a procedure to programatically create and move that  instance's icon to another workspace, for example, these instances are transient.  **Transient** instances are not considered a permanent part of the application's knowkedge and therefore will be deleted when Restarting G2 and will not be saved when you choose save kb.
 
+**TIP** It can be useful to create free-text to describe the procedure call - input/output for any new developers that will be using your application or any API calls as below:
+
+.. image:: /img/g2/ProcedureHelpText.png
+
 
 
 Relationships
