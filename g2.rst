@@ -137,6 +137,11 @@ The **inspect tool** is a powerful tool available within G2 in order to perform 
 - show on a workspace every item whow status is disabled
 
 
+Understanding API Development
+------------------------------
+
+<add notes>
+
 ProTools - A Developer's Toolbox
 ---------------------------------
 
