@@ -71,9 +71,6 @@ The **workspace menu** can be accessed by right-clicking on any workspace.  Ther
 - **user-menu-choice:** gives you the ability to extend default menus to add custom user-defined functionality.  For example, a sub-menu option created to change the workspace and all subworkspaces colors.
 
 
-
-
-
 Rules vs Procedures
 --------------------
 
@@ -202,6 +199,12 @@ Drop current window to bottom (behind other windows)                            
 
 
 
+Code Examples
+--------------
+
+**Recursive**
+
+.. image:: /img/g2/CodeExampleRecursive.png
 
 
 
