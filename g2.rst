@@ -63,6 +63,17 @@ All created items in G2 are placed on **workspaces**.  It is good practice to na
 
 **Note:** Be sure to set the 'Top level module' if not already set.
 
+The Workspace Menu
+'''''''''''''''''''
+
+The **workspace menu** can be accessed by right-clicking on any workspace.  There you will find many features.  Below are a few cool ones to help with workflow and development process:
+
+- **user-menu-choice:** gives you the ability to extend default menus to add custom user-defined functionality.  For example, a sub-menu option created to change the workspace and all subworkspaces colors.
+
+
+
+
+
 Rules vs Procedures
 --------------------
 
